@@ -6,7 +6,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font: 400 15px;
   line-height: 1.8;
-  color: #FFCB18;
+  color: azure;
+  background-color: black;
 }
 
 h1 {
@@ -64,11 +65,6 @@ h4 {
   -webkit-filter:grayscale(100%);
 }
 
-.container-fluid {
-  background-color: black;
-  color: azure;
-}
-
 scroll-container {
   display: block;
   width: 350px;
@@ -77,9 +73,25 @@ scroll-container {
   scroll-behavior: smooth;
 }
 
+#about {
+  background-color: #251E1D;
+}
+
 #part2 {
   background-color: #F1F1F1;
+  color: #303030;
 }
+
+#part3 {
+  background-color: #FFFFFF;
+  color: #303030;
+}
+
+#aunt {
+  background-color: #ffefd0;
+  color: black;
+}
+
 
 #button {
   background-color:none;
@@ -90,6 +102,7 @@ scroll-container {
 
 #footer {
   background-color: rgb(24, 24, 24);
+  color: #FFCB18;
 }
 
 .spot {
@@ -103,6 +116,8 @@ scroll-container {
 	background-position: -100%;
 	transition: all 1s;
 }
+
+
 
 /* Create three unequal columns that floats next to each other */
 .column {
@@ -132,4 +147,63 @@ scroll-container {
   .column.side, .column.middle {
     width: 100%;
   }
+}
+
+
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  width: 325px;
+}
+
+.img__description {
+  position: absolute;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5%;
+  margin: auto;
+  z-index: 10;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 5%;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+ /* speech-bubble */
+.speech-bubble {
+	position: relative;
+	background: #6171e4;
+	border-radius: .4em;
+  color: white;
+  padding: 5%;
+  width: 250px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: fit-content;
+	border: 21px solid transparent;
+	border-top-color: #6171e4;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10.5px;
+	margin-bottom: -21px;
 }
